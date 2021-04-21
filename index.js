@@ -1,5 +1,7 @@
 var http = require('http'); // 1 - Import Node.js core module
 
+const port = process.env.PORT || 3000
+
 reqNum = 0
 var server = http.createServer(function (req, res) {   // 2 - creating server
     reqNum++;
@@ -13,4 +15,4 @@ var server = http.createServer(function (req, res) {   // 2 - creating server
     res.end();
 });
 
-server.listen(3000); //3 - listen for any incoming requests
+server.listen(port); //3 - listen for any incoming requests
