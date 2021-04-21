@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NQPhuc/Infinite-Integer-Calculator/issues"
   },
-  "homepage": "https://github.com/NQPhuc/Infinite-Integer-Calculator#readme"
+  "homepage": "https://github.com/NQPhuc/Infinite-Integer-Calculator#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

@@ -231,13 +231,15 @@
 </head>
 
 <body>
-<!--
-integer 1: <input type="number" id="a" value="0"><br>
-integer 2: <input type="number" id="b" value="0"><br>
--->
 integer 1: <br><textarea id="a" rows="6" cols="100"></textarea><br>
 integer 2: <br><textarea id="b" rows="6" cols="100"></textarea><br>
-operator: <input type="text" size="1" id="op" value="+"><br>
+operator: <!--input type="text" size="1" id="op" value="+"-->
+<select id="op">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="%">modolus</option>
+</select><br>
 <button type="button" onclick="calculate()">Calculate</button>
 <br>
 
