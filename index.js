@@ -1,17 +1,26 @@
-var http = require('http'); // 1 - Import Node.js core module
-
+let http = require('http'); // 1 - Import Node.js core module
 const port = process.env.PORT || 3000
+let fs = require('fs');
 
-reqNum = 0
-var server = http.createServer(function (req, res) {   // 2 - creating server
-    reqNum++;
+let server = http.createServer(function (request, response) {   // 2 - creating server
     //handle incomming requests here..
     //console.log("HERE" + reqNum);
     // set response header
-    res.writeHead(200, { 'Content-Type': 'text/html' }); 
+    response.writeHead(200, { 'Content-Type': 'text/html' }); 
         
     // set response content    
-    res.write('<html><body><p>This is home Page.</p></body></html>');
+    //res.write('<html><body><p>This is home Page.</p></body></html>');
+
+    fs.readFile('./test.html', function (err, html) {
+        if (err) {
+            response.writeHead(404);
+            respone.write('file not found');
+        }
+        else{
+            response.write(html);  
+        }
+    });
+    
     res.end();
 });
 
