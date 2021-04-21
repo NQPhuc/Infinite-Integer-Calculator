@@ -10,18 +10,20 @@ let server = http.createServer(function (request, response) {   // 2 - creating 
         
     // set response content    
     //res.write('<html><body><p>This is home Page.</p></body></html>');
-
-    fs.readFile('./test.html', function (err, html) {
+    fs.re
+    fs.readFile('test.html', function (err, html) {
         if (err) {
             response.writeHead(404);
             respone.write('file not found');
+            response.end();
+            throw err;  
         }
         else{
-            response.write(html);  
+            response.write(html);
+            response.end();  
         }
-    });
+    }); 
     
-    res.end();
 });
 
 server.listen(port); //3 - listen for any incoming requests
