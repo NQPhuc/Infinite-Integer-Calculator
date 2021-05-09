@@ -10,7 +10,6 @@
         
 //     // set response content    
 //     //res.write('<html><body><p>This is home Page.</p></body></html>');
-//     fs.re
 //     fs.readFile('test.html', function (err, html) {
 //         if (err) {
 //             response.writeHead(404);
